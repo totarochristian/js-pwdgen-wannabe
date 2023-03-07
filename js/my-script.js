@@ -1,5 +1,6 @@
 const fixedNumber = 21;//Fixed number to add at the end of the generated password
 let error = false;
+let password = '';
 
 //Ask the name of the user and check the value
 let userName = prompt("Inserisci il tuo nome");
@@ -25,11 +26,13 @@ if (!userColor || userColor.length === 0 || userColor === ' '){
     error = true;
 }
 
-//Generate the password concatenating the variables inserted by the user
-let password = userName + userLastName + userColor + fixedNumber;
 //If there are errors during the insert of the password, set the pass with an invalid text
+//else Generate the password concatenating the variables inserted by the user
 if(error)
     password = "Uno o più campi inseriti non sono validi!";
+else
+    password = userName + userLastName + userColor + fixedNumber;
+
 
 //Define the password generated as the text of the paragraph with the id "GeneratedPassword"
 document.getElementById("GeneratedPassword").innerHTML = password;
