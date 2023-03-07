@@ -1,9 +1,12 @@
-const fixedNumber = 21;//Fixed number to add at the end of the generated password
+const fixedNumber = 21;
 let error = false;
 let password = '';
+let userName = '';
+let userLastName = '';
+let userColor = '';
 
 //Ask the name of the user and check the value
-let userName = prompt("Inserisci il tuo nome");
+userName = prompt("Inserisci il tuo nome");
 if (!userName || userName.length === 0 || userName === ' '){
     alert("Il nome inserito non è valido");
     userName = "nome";
@@ -13,7 +16,7 @@ if (!userName || userName.length === 0 || userName === ' '){
 //If no error, ask the last name value
 if(!error){
     //Ask the name of the user and check the value
-    let userLastName = prompt("Inserisci il tuo cognome");
+    userLastName = prompt("Inserisci il tuo cognome");
     if (!userLastName || userLastName.length === 0 || userLastName === ' '){
         alert("Il cognome inserito non è valido");
         userLastName = "cognome";
@@ -24,7 +27,7 @@ if(!error){
 //If no error, ask the favorite color value
 if(!error){
     //Ask the favorite color of the user and check the value
-    let userColor = prompt("Inserisci il tuo colore preferito");
+    userColor = prompt("Inserisci il tuo colore preferito");
     if (!userColor || userColor.length === 0 || userColor === ' '){
         alert("Il colore inserito non è valido");
         userColor = "colorepreferito";
